@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+# Jeevuthan
+mini project of 6th sem
+
+>>>>>>> 83136c80cdd4024d650f9fd054d55c2ed8f6179b
 JEEVUTHAN DATABASE DOCUMENTATION
 ====================================
 
@@ -74,4 +80,8 @@ JU_PET'S INFO //All pet related info is stored in this table
 	*Pet_breed
 	*Pet_color
 	
+<<<<<<< HEAD
 	
+=======
+	
+>>>>>>> 83136c80cdd4024d650f9fd054d55c2ed8f6179b
