@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Reg
+ * Template Name: register_ngo
  *
  * @package WordPress
  * @subpackage Twenty_Fourteen
@@ -131,7 +131,12 @@ $errNameSize="";
              }
             
             
-     } ?>
+     } 
+     if($_REQUEST['logout'])
+     {
+         wp_redirect('http://localhost/jeevuthan/index.php/login-2/');
+     }
+     ?>
 <html>
     <body>
     <form method="POST" style="margin-left: 500px" >
@@ -193,6 +198,7 @@ $errNameSize="";
         
      }?>
       </td></tr>
+    <tr><td colspan="3"><input type ="submit" name="logout" value="Log Out"></td> </tr>
     
 </table> 
 </form>
