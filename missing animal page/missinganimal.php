@@ -299,7 +299,7 @@ if(isset($_REQUEST['submit']))
         <tr><td></td><td colspan="2"><?php if($errPetBreed!==""){echo $errPetBreed;}?></td></tr>
     <tr><td> <span class="errText">*</span>Pet color:</td><td colspan="2"> <input type="text" name="pet_color" placeholder="eg:white"value="<?php if($_SESSION['flag']===false){echo $_POST['pet_color'];}?>"></td></tr>
     <tr><td></td><td colspan="2"><?php if($errPetColor!==""){echo $errPetColor;}?></td></tr>
-    <tr><td><span class="errText">*</span>Pet Type:</td><td  colspan="2"><select name="pet_type" id="type"><option value="">select</option>
+    <tr><td><span class="errText">*</span>Pet Type:</td><td  colspan="2"><select name="pet_type" id="type"  style="width:173px;"><option value="">select</option>
             <option value="dog">dog</option>
             <option value="cat">cat</option>
             <option value="bird">bird</option>
@@ -315,7 +315,7 @@ if(isset($_REQUEST['submit']))
     <tr><td></td><td><?php if($errPetDate!==""){echo $errPetDate;}?></td></tr>
     <tr><td><span class="errText">*</span>Pet Missing location:</td><td  colspan="2"><?php
             global $wpdb;
-            $location=$wpdb->get_results("select location_name from wp_ju_location");?><select name="pet_m_location" id="location"><option value="">select</option>
+            $location=$wpdb->get_results("select location_name from wp_ju_location");?><select name="pet_m_location" id="location" style="width:173px;"><option value=""  >select</option>
             
             <?php
             foreach($location as $x=>$y)
@@ -337,17 +337,17 @@ if(isset($_REQUEST['submit']))
     <tr><td>Choose Pet Photo:</td><td><input name="pet_photo" type="file"></td></tr>
 <tr ><td></td><td colspan="2"><?phpif(errFileType!==""){ echo $errFileType;}?></td></tr>
     <tr><td colspan="3"><h3>Owner Information:</h3></td></tr>
-    <tr><td><span class="errText">*</span>Name: </td> <td colspan="2"><input type ="text" name="o_name" required="required" placeholder="First Last name " value="<?php if($_SESSION['flag']===false){echo $_POST['o_name'];}?>"></td></tr>
+    <tr><td><span class="errText">*</span>Name: </td> <td colspan="2"><input type ="text" name="o_name"  placeholder="First Last name " value="<?php if($_SESSION['flag']===false){echo $_POST['o_name'];}?>"></td></tr>
     <tr><td></td><td colspan="2"><?php if($errOName!==""){echo $errOName;}if($errONameSize){echo $errONameSize;}?></td></tr>
     <tr><td><span class="errText">*</span>Mobile no:</td><td colspan="2"><input type="text" id="mobile-number" placeholder="10 digit number" name="o_number"  value="<?php if($_SESSION['flag']===false){echo $_POST['o_number'];}?>"></td></tr>
     <tr><td></td><td colspan="2"><?php if($errPhone!==""){echo $errPhone;}?></td><td><?php if($errZip!==""){echo $errZip;}?></td></tr>
-    <tr><td><span class="errText">*</span> Email id:</td><td colspan="2"> <input type="email" name="o_email" placeholder="john.12son@gmail.com"value="<?php if($_SESSION['flag']===false){echo $_POST['o_email'];}?>"></td></tr>
+    <tr><td><span class="errText">*</span> Email id:</td><td colspan="2"> <input type="text" name="o_email" placeholder="john.12son@gmail.com"value="<?php if($_SESSION['flag']===false){echo $_POST['o_email'];}?>"></td></tr>
     <tr><td></td><td colspan="2"><?php if($errEmail!==""){echo $errEmail;}?></td></tr>
-    <tr><td><span class="errText">*</span>Address:</td><td colspan="2"> <textarea id="address" rows="2" cols="10" name="o_add" ><?php if($_SESSION['flag']===false){echo $_POST['o_add'];}?></textarea></td></tr>
+    <tr><td><span class="errText">*</span>Address:</td><td colspan="2"> <textarea style="resize: none; width: 160px;" id="address" rows="2" cols="10" name="o_add"><?php if($_SESSION['flag']===false){echo $_POST['o_add'];}?></textarea></td></tr>
     <tr><td></td><td colspan="2"><?php if($errAddress!==""){echo $errAddress;}?></td></tr>
     <tr><td>City:</td><td colspan="2"><input type="text" name="o_city" placeholder="eg:indore" value="<?php if($_SESSION['flag']===false){echo $_POST['o_city'];}?>"></td></tr>
     <tr><td></td><td colspan="2"><?php if($errCity!==""){echo $errCity;}?></td></tr>
-    <tr><td><span class="errText">*</span>security question:</td><td  colspan="2"><select name="o_question"  id="question"><option value="">select</option>
+    <tr><td><span class="errText">*</span>security question:</td><td  colspan="2"><select name="o_question"  id="question" style="width:173px;"><option value="">select</option>
             <option value="0">What is your best friend's name?</option>
             <option value="1">What is your home town?</option>
             <option value="2">Name of your favourite book?</option>
@@ -394,6 +394,4 @@ if(isset($_REQUEST['submit']))
    
 </html>
 
-<?php
-            get_footer();
-?>
+<?php get_footer();?>

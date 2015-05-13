@@ -6,6 +6,7 @@
  * @subpackage Twenty_Fourteen
  * @since Twenty Fourteen 1.0
  */
+get_header();
 ?>
 <?php
 $flag='false';
@@ -25,7 +26,7 @@ if(isset($_REQUEST['submit']))
                     if($b->admin_password===$_POST['admin_password'])
                     {
                         $flag=true;
-                        wp_redirect('http://localhost/jeevuthan/index.php/registration-2/');
+                        wp_redirect('http://localhost/jeev-uthan/?page_id=126');
                     }
                 }
             }
@@ -46,7 +47,7 @@ if(isset($_REQUEST['submit']))
 <html>
 <head> </head>
     <body>
-        <form action="" method="POST" style="margin-left: 500px" >
+        <form action="" method="POST" style="margin-left: 350px" >
     <table border="0px">
         <tr><td colspan="3"><h3>username</h3></td></tr>
         <tr><td colspan="2"><input type ="text" name="admin_username" value="<?php echo $_POST['admin_username'];?>"></tr>
